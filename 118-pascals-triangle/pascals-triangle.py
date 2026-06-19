@@ -1,9 +1,9 @@
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
-        result=[]
+        row=[]
         for i in range(numRows):
-            row=[1]*(i+1)
+            row1=[1]*(i+1)
             for j in range(1,i):
-                    row[j]=result[i-1][j-1]+result[i-1][j]
-            result.append(row)
-        return result
+                row1[j]=row[i-1][j-1]+row[i-1][j]
+            row.append(row1)
+        return row
