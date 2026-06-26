@@ -3,4 +3,4 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        nums[:]=[x for x in nums if x!=0]+[0]*nums.count(0)
+        nums[:]=[x for x in nums if x != 0]+nums.count(0)*[0]
