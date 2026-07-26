@@ -3,5 +3,5 @@ class Solution:
         nums.sort()
         n=len(nums)
         n1=nums[-1]*nums[-2]*nums[-3]
-        n2=nums[0]*nums[1]*nums[n-1]
+        n2=nums[0]*nums[1]*nums[-1]
         return max(n1,n2)
