@@ -5,7 +5,7 @@ class Solution:
         count=0
         pre=float("-inf")
         for i in range(len(nums)):
-            if nums[i]-1==pre:
+            if nums[i]==pre+1:
                 count+=1
                 pre=nums[i]
             elif nums[i]!=pre:
