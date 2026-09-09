@@ -4,7 +4,7 @@ class Solution:
         left=0
         for i in range(len(nums)):
             right=total-left-nums[i]
-            if right==left:
+            if left==right:
                 return i
             left+=nums[i]
         return -1
