@@ -31,3 +31,7 @@ class Solution:
             ans += i * i * d[i]
 
         return ans
+        
+        
+        
+        
