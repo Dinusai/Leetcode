@@ -1,7 +1,11 @@
 class Solution:
-    def minCost(self, grid: list[list[int]]) -> int:
-        dp = [{0}] + [set() for _ in range(len(grid[0]) - 1)]  # dp[j]: every XOR that can reach column j of the row above
-        for row in grid:
-            for j, v in enumerate(row):
-                dp[j] = {x ^ v for x in dp[j] | (dp[j - 1] if j else set())}  # come from above or from the left
-        return min(dp[-1])
+    def minCost(self, A: list[list[int]]) -> int:
+        dp = [set()] * len(A[0])
+        dp[0] = set([0])
+        
+        for i in range(len(A)):
+            for j in range(len(A[0])):
+                prev = dp[j].union(dp[j - 1]) if j else dp[j]
+                dp[j] = set(x ^ A[i][j] for x in prev)                
+
+        return min(dp[-1]) 
