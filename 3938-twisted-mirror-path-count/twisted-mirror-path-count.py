@@ -1,7 +1,9 @@
 mat = [[[1, 1], [1, 1]], [[0, 1], [1, 0]]]
 MOD = 10**9 + 7
+
 class Solution:
     def uniquePaths(self, A: List[List[int]]) -> int:
+       
         n, left = len(A[0]), 0
         dp = [0] * n
 
